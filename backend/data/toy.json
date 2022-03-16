@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "lYJPue",
+    "name": "bkablabla",
+    "price": 356,
+    "labels": [],
+    "inStock": false,
+    "createdAt": "2022-03-15T20:29:10.301Z"
+  },
+  {
+    "_id": "PIwxFd",
+    "name": "Ping-Pong",
+    "price": 130,
+    "inStock": false,
+    "createdAt": "2022-03-15T17:14:25.915Z"
+  },
+  {
+    "_id": "Cvwjjh",
+    "name": "Ben",
+    "price": 40,
+    "inStock": false,
+    "createdAt": "2022-03-15T17:03:40.788Z"
+  },
+  {
+    "_id": "t102",
+    "name": "Ball",
+    "price": 250,
+    "labels": [
+      "Outdoor"
+    ],
+    "inStock": false,
+    "createdAt": "2022-03-15T17:10:46.171Z"
+  },
+  {
+    "_id": "t103",
+    "name": "Soccer Game Ball",
+    "price": 204,
+    "labels": [
+      "Outdoor"
+    ],
+    "inStock": false,
+    "createdAt": "2022-03-15T23:54:31.457Z"
+  },
+  {
+    "_id": "t104",
+    "name": "Animal Puzzle - 1000 pcs",
+    "price": 70,
+    "labels": [
+      "Box game",
+      "Art",
+      "Puzzle"
+    ],
+    "createdAt": null,
+    "inStock": true
+  }
+]
