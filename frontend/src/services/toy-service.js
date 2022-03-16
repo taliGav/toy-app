@@ -28,7 +28,7 @@ const reviews = ['great toy', 'excellent'];
 const TOY_KEY = 'toys';
 const TOY_URL = '//localhost:3050/api/toy/';
 
-const BASE_URL = (process.env.NODE_ENV !== 'development') ? '/api/toy'  : '//localhost:3325/api/toy/';
+const BASE_URL = (process.env.NODE_ENV !== 'development') ? '/api/toy/'  : '//localhost:3325/api/toy/';
 
 
 const gToys = [
