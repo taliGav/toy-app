@@ -1,0 +1,93 @@
+[{
+        "_id": "qzxudp",
+        "name": "Domino",
+        "price": 15,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "inStock": true,
+        "createdAt": "2022-03-16T18:52:56.938Z"
+    },
+    {
+        "_id": "568Vt3",
+        "name": "vcd",
+        "price": 1,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "inStock": true,
+        "createdAt": "2022-03-16T18:47:45.474Z"
+    },
+    {
+        "_id": "OdzTlH",
+        "name": "asdasd",
+        "price": 100,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "inStock": true,
+        "createdAt": "2022-03-16T18:34:18.233Z"
+    },
+    {
+        "_id": "nBNHJB",
+        "name": "sssssssss",
+        "price": 100,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "inStock": true,
+        "createdAt": "2022-03-16T18:32:45.307Z"
+    },
+    {
+        "_id": "lYJPue",
+        "name": "bkablablaassas",
+        "price": 356,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "inStock": false,
+        "createdAt": "2022-03-16T18:34:59.413Z"
+    },
+    {
+        "_id": "t102",
+        "name": "Ball",
+        "price": 250,
+        "labels": [
+            "Outdoor"
+        ],
+        "inStock": false,
+        "createdAt": "2022-03-15T17:10:46.171Z"
+    },
+    {
+        "_id": "t103",
+        "name": "Soccer Game Ball",
+        "price": 204,
+        "labels": [
+            "Outdoor"
+        ],
+        "inStock": false,
+        "createdAt": "2022-03-15T23:54:31.457Z"
+    },
+    {
+        "_id": "t104",
+        "name": "Animal Puzzle - 1000 pcs",
+        "price": 70,
+        "labels": [
+            "Box game",
+            "Art",
+            "Puzzle"
+        ],
+        "createdAt": null,
+        "inStock": true
+    }
+]

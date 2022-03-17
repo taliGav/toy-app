@@ -1,9 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import home from '../views/home.vue'
-import about from '../views/about.vue'
-import toyApp from '../views/toy-app.vue'
-import toyDetails from '../views/toy-details.vue'
-import toyEdit from '../views/toy-edit.vue'
+import home from './../views/home.vue'
+import about from './../views/about.vue'
+import toyApp from './../views/toy-app.vue'
+import toyDetails from './../views/toy-details.vue'
+import toyEdit from './../views/toy-edit.vue'
+import toyDashboard from './../views/toy-dashboard.vue'
 
 
 const router = createRouter({
@@ -35,6 +36,16 @@ const router = createRouter({
       name: 'about',
       component: about,
     },
+    {
+      path: '/dashboard',
+      name: 'toy-dashboard',
+      component: toyDashboard,
+    },
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   component: about,
+    // },
   ],
 })
 

@@ -2,7 +2,7 @@
 
 // import {storageService} from './storage.service.js'
 import { storageService } from './async-storage-service.js';
-import axios from 'axios'
+import axios from 'axios';
 
 import { utilService } from './util-service.js';
 
@@ -28,7 +28,7 @@ const reviews = ['great toy', 'excellent'];
 const TOY_KEY = 'toys';
 const TOY_URL = '//localhost:3050/api/toy/';
 
-const BASE_URL = (process.env.NODE_ENV !== 'development') ? '/api/toy/'  : '//localhost:3325/api/toy/';
+const BASE_URL = (process.env.NODE_ENV !== 'development') ? '/api/toy/' : '//localhost:3325/api/toy/';
 
 
 const gToys = [
@@ -89,16 +89,20 @@ window.ss = storageService;
 
 function query(filterBy) {
     console.log('filterBy', filterBy);
-    return axios.get(BASE_URL, {params: filterBy}).then((res) => res.data);
+    return axios.get(BASE_URL, { params: filterBy })
+        .then((res) => {
+            console.log('query res', res);
+            return res.data;
+        });
 }
-  
+
 // function query() {
 //     return axios.get(TOY_URL).then(res => res.data);
 // }
 
 function getById(id) {
     return axios.get(BASE_URL + id).then(res => {
-        let toy = res.data
+        let toy = res.data;
         console.log('toy in service', toy);
         toy.reviews = reviews;
         return toy;
@@ -112,13 +116,22 @@ function remove(id) {
 function save(toy) {
     const toyToSave = JSON.parse(JSON.stringify(toy));
     if (toyToSave._id) {
-        return axios.put(BASE_URL + toyToSave._id, toyToSave);
+        return axios.put(BASE_URL + toyToSave._id, toyToSave)
+            .then((res) => {
+                console.log('put saved res', res);
+                return res.data;
+            });
+
     } else {
-        return axios.post(BASE_URL, toyToSave);
+        return axios.post(BASE_URL, toyToSave)
+            .then((res) => {
+                console.log('post saved res', res);
+                return res.data;
+            });
     }
 }
 
-function getNewToy(_id = '', name = '', price= 100, labels = []) {
+function getNewToy(_id = '', name = '', price = 100, labels = []) {
     return {
         _id,
         name,

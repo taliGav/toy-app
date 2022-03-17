@@ -114,7 +114,7 @@ export const toyStore = {
     actions: {
         loadToys({ commit, state }) {
             toyService.query(state.filterBy).then((toys) => {
-                console.log('toys' , toys);
+                console.log('toys', toys);
                 commit({ type: 'setToys', toys });
             });
         },
@@ -141,12 +141,11 @@ export const toyStore = {
             dispatch({ type: 'loadToys' });
         },
         saveToy(context, { toy }) {
-            // if (toy._id) {
             //     return toyService.save(toy)
             //         .then(savedToy => {
             //             return savedToy;
             //         });
-            //     } else {
+            //     } else
             console.log('toy', toy);
             return toyService.save(toy)
                 .then(savedToy => {
@@ -159,7 +158,6 @@ export const toyStore = {
                     console.error('Cannot Add Toy', err);
                     throw err;
                 });
-
         },
         removeToy(context, payload) {
             // console.log('payload', payload);

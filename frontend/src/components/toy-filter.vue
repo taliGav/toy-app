@@ -17,9 +17,27 @@
       />
       <label for="scales">In stock</label>
     </div>
-    <label>
-      Labels:
-      <select @change="setFilter" multiple v-model="filterBy.labels">
+    <div style="display: inline-block">
+      <label style="margin-left: 20px">
+        Labels:
+        <!-- <p style="margin-left: 10px">default</p> -->
+        <el-select
+          v-model="filterBy.labels"
+          @change="setFilter"
+          multiple
+          placeholder="Select"
+          style="width: 240px">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          />
+        </el-select>
+      </label>
+    </div>
+
+    <!-- <select @change="setFilter" multiple v-model="filterBy.labels">
         <option value="On wheels">On wheels</option>
         <option value="Box game">Box game</option>
         <option value="Art">Art</option>
@@ -27,18 +45,17 @@
         <option value="Doll">Doll</option>
         <option value="Puzzle">Puzzle</option>
         <option value="Outdoor">Outdoor</option>
-      </select>
-      <div class="toy-sort">
-        <label for="toy">
-          Sort By:
-          <select @change="setFilter" v-model="filterBy.sortBy">
-            <option value="time">Time</option>
-            <option value="name">Name</option>
-            <option value="price">Price</option>
-          </select>
-        </label>
-      </div>
-    </label>
+      </select> -->
+    <div class="toy-sort">
+      <label for="toy">
+        Sort By:
+        <select @change="setFilter" v-model="filterBy.sortBy">
+          <option value="time">Time</option>
+          <option value="name">Name</option>
+          <option value="price">Price</option>
+        </select>
+      </label>
+    </div>
 
     <!-- Sort by:
         <select name="sortBy" id="sortBy" @change="setSort" v-model="sortBy">
@@ -49,7 +66,10 @@
   </section>
 </template>
 
+
 <script>
+import { ref } from "vue";
+
 export default {
   name: "toy-filter",
   data() {
@@ -57,17 +77,47 @@ export default {
       filterBy: {
         name: "",
         isInStock: false,
-        labels: [],
+        labels: ref([]),
         sortBy: "",
+        direction: 1
       },
+      options: [
+        {
+          value: "On wheels",
+          label: "On wheels",
+        },
+        {
+          value: "Box game",
+          label: "Box game",
+        },
+        {
+          value: "Art",
+          label: "Art",
+        },
+        {
+          value: "Baby",
+          label: "Baby",
+        },
+        {
+          value: "Doll",
+          label: "Doll",
+        },
+        {
+          value: "Puzzle",
+          label: "Puzzle",
+        },
+        {
+          value: "Outdoor",
+          label: "Outdoor",
+        },
+      ],
     };
   },
   computed: {},
-
   methods: {
     setFilter() {
       console.log("set filter on", this.filterBy);
-        this.$emit('setFilter', JSON.parse(JSON.stringify(this.filterBy)));
+      this.$emit("setFilter", JSON.parse(JSON.stringify(this.filterBy)));
     },
     isInStock() {
       let stockStatus = !this.filterBy.isInStock;
